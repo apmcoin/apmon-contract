@@ -4,6 +4,7 @@ import { HardhatUserConfig, task } from "hardhat/config";
 import "@nomiclabs/hardhat-etherscan";
 import "@nomiclabs/hardhat-waffle";
 import "@typechain/hardhat";
+import "@nomiclabs/hardhat-ethers"
 import "hardhat-gas-reporter";
 import "solidity-coverage";
 
@@ -35,7 +36,7 @@ const config: HardhatUserConfig = {
     enabled: process.env.REPORT_GAS !== undefined,
     currency: "USD",
   },
-  bscscan: {
+  etherscan: {
     apiKey: process.env.BSCSCAN_API_KEY,
   },
 };
